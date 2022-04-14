@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/icon_cost_of_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/service_question"
+            app:layout_constraintBottom_toBottomOf="@id/service_question"
+            app:srcCompat="@drawable/ic_uang" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cost_of_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/nilaiuang"
+            app:layout_constraintStart_toEndOf="@id/icon_cost_of_service"
+            app:layout_constraintBottom_toTopOf="@+id/calculate_button"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="@+id/tip_options"
+            app:layout_constraintTop_toBottomOf="@+id/tip_options">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cost_of_service_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#757575"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/service_question"
+            style="@style/Widget.konversimatauang.TextView"
+            android:layout_width="221dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+
+            android:text="@string/pilihuang"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/icon_cost_of_service"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/tip_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:checkedButton="@id/opsi_euro"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/service_question">
+
+            <RadioButton
+                android:id="@+id/opsi_euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#632222"
+                android:buttonTint="@color/green"
+                android:text="@string/uangeuro"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/opsi_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/uangUS"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/opsi_yen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/uangyen"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/opsi_riyal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/green"
+                android:text="@string/uangriyal"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/icon_round_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cost_of_service"
+            app:layout_constraintBottom_toBottomOf="@id/cost_of_service"
+            app:srcCompat="@drawable/ic_konversi" />
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="281dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="1992dp"
+            android:text="@string/konversi"
+            app:backgroundTint="#910096"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.354"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tip_result"
+            style="@style/Widget.konversimatauang.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

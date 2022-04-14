@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Konversi Mata Uang</string>
+    <string name="pilihuang">Pilih Mata Uang</string>
+    <string name="nilaiuang">Nilai Mata Uang</string>
+    <string name="uangeuro">Euro</string>
+    <string name="uangUS">US Dollar</string>
+    <string name="uangyen">Japanese Yen</string>
+    <string name="uangriyal">Saudi Riyal</string>
+    <string name="konversi">KONVERSI</string>
+</resources>
